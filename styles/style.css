@@ -6,6 +6,9 @@
     padding: 0;
     font-family: 'Poppins';
 }
+img{
+    width: 100%;
+}
 
 /* =======header part styles==== */
 .header, .collection{
@@ -62,7 +65,7 @@
 .banner-image{
     background-image: url("../images/Circle\ design.svg");
     background-repeat: no-repeat;
-    padding: 30px 33px 31px 2px;
+    background-size: contain;
 
 }
 .marketplaces{
@@ -192,4 +195,95 @@
     display: flex;
     justify-content: center;
     gap: 16px;
+}
+
+
+/* Media query works for influencer gear */
+/* ==============for mobile screen============ */
+@media screen and (max-width:576px) {
+    .header, .collection {
+        padding: 0px 20px;
+    }
+    .navigation {
+        padding-top: 17px;
+        flex-direction: column;
+    }
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .banner {
+        flex-direction: column-reverse;
+    }
+    .banner-info {
+        text-align: center;
+    }
+    .marketplace {
+        gap: 15px;
+        padding: 15px 0px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .all-collections {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .items {
+        width: 280px;
+    }
+    .featured-products {
+        padding: 50px 60px;
+    }
+    .featured-products {
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+/* for tablet devices */
+@media screen and (min-width:577px) and (max-width:1200px) {
+    .header, .collection {
+        padding: 0px 60px;
+    }
+    .navigation {
+        padding-top: 17px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .banner-title {
+        font-size: 40px;
+    }
+    .banner-description, .featured-description{
+        font-size: 10px;
+    }
+    .featured-title{
+        font-size: 25px;
+    } 
+    .featured-products {
+        gap: 15px;
+    }
+    .all-collections {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .items {
+        width: 280px;
+    }
+    .featured-products {
+        padding: 50px 60px;
+    }
+}
+
+/* for big laptop devices */
+@media screen and (min-width:1201px) and (max-width:1700px) {
+    .header, .collection {
+        padding: 0px 60px;
+    }
+
+
+
+    .featured-products {
+    padding: 50px 60px;
+}
 }
